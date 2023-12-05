@@ -1,6 +1,6 @@
 module github.com/devworlds/FullCycle-ApiGraphQL
 
-go 1.21.2
+go 1.23
 
 require (
 	github.com/99designs/gqlgen v0.17.41
