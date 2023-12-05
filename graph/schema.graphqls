@@ -1,0 +1,36 @@
+type Token {
+  address: String!
+  name: String!
+  description: String!
+  networks: [Network!]!
+}
+
+type Network {
+  id: Int!
+  name: String!
+  description: String!
+  token: Token!
+}
+
+input NewToken {
+  address: String!
+  name: String!
+  description: String!
+}
+
+input NewNetwork {
+  id: Int!
+  name: String!
+  description: String!
+  tokenAddress: String!
+}
+
+type Query {
+  tokens: [Token!]!
+  network: [Network!]!
+}
+
+type Mutation {
+  createToken(input: NewToken!): Token!
+  createNetwork(input: NewNetwork!): Network!
+}
